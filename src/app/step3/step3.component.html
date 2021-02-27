@@ -1,0 +1,19 @@
+<div class="file-wrapper">
+  <div class="file-wrapper__paper">
+    <input
+      class="file-wrapper__input"
+      type="file"
+      (change)="onChange($event)"
+      multiple
+      accept=".png, .jpg, .jpeg, .gif"
+    />
+    <div class="file-wrapper__title">Upload somehting here</div>
+  </div>
+  <app-files-list [files]="files!"></app-files-list>
+  <div class="file-wrapper__buttons">
+    <a routerLink="/result">
+      <button mat-flat-button color="primary">Next</button>
+    </a>
+    <button mat-flat-button color="primary" (click)="onUpload()">Upload</button>
+  </div>
+</div>

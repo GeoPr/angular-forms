@@ -1,0 +1,37 @@
+<form class="form" [formGroup]="formData" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline" class="form-field">
+    <mat-label>Email</mat-label>
+    <input
+      type="email"
+      matInput
+      placeholder="test@test.test"
+      formControlName="email"
+      autocomplete="off"
+      [ngModel]
+      email
+      name="email"
+    />
+  </mat-form-field>
+  <mat-checkbox
+    class="form__checkbox"
+    color="primary"
+    [(ngModel)]="hasPhone"
+    [ngModelOptions]="{ standalone: true }"
+  >
+    I have a phone humber
+  </mat-checkbox>
+  <mat-form-field appearance="outline" *ngIf="hasPhone">
+    <mat-label>Phone</mat-label>
+    <input
+      type="text"
+      matInput
+      placeholder="1-234-567-89-00"
+      formControlName="phone"
+      autocomplete="off"
+      mask="+0-000-000-00-00"
+    />
+  </mat-form-field>
+  <button mat-raised-button color="primary" class="btn" type="submit">
+    Next
+  </button>
+</form>

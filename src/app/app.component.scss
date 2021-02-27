@@ -1,0 +1,18 @@
+.sc {
+  min-height: 100vh;
+  padding: 100px 0px;
+  background: #232332;
+  // .sc__body
+  &__body {
+    display: grid;
+    row-gap: 15px;
+    text-align: center;
+    justify-content: center;
+  }
+  // .sc__title
+  &__title {
+    font-size: 2rem;
+    color: rgb(243, 134, 152);
+    font-family: "Permanent Marker";
+  }
+}

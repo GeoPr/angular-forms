@@ -1,0 +1,28 @@
+<div class="result">
+  <div>
+    <h3 class="result__title">Your info</h3>
+    <div class="result__table table-result">
+      <div class="table-result__col">
+        <div
+          *ngFor="let item of mainData"
+          class="table-result__cell table-result__cell_left"
+        >
+          {{ item[0] }}
+        </div>
+      </div>
+      <div class="table-result__col">
+        <div
+          *ngFor="let item of mainData"
+          class="table-result__cell table-result__cell_right"
+        >
+          {{ item[1] || "——" }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="files?.length">
+    <h3 class="result__title">Your files</h3>
+    <app-files-list [files]="files!"></app-files-list>
+  </div>
+  <button mat-flat-button color="primary" (click)="onClick()">Submit</button>
+</div>

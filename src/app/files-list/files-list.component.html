@@ -1,0 +1,23 @@
+<mat-list
+  *ngIf="files?.length"
+  [ngStyle]="{
+    display: 'grid',
+    rowGap: 15,
+    padding: 0
+  }"
+>
+  <mat-list-item
+    *ngFor="let file of files"
+    [ngStyle]="{
+      background: '#333',
+      color: '#fff'
+    }"
+  >
+    <mat-icon mat-list-icon color="accent" style="width: 0px; flex: 0 0 0px">
+      folder
+    </mat-icon>
+    <div mat-line style="margin-bottom: 10px;">{{ file.name }}</div>
+    <div mat-line>{{ file.size / 1024 | number: "1.0" }}Mb</div>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>

@@ -1,0 +1,25 @@
+<form class="form" [formGroup]="formData" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline">
+    <mat-label>First name</mat-label>
+    <input
+      type="text"
+      matInput
+      placeholder="Ivan"
+      formControlName="firstName"
+      autocomplete="off"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Last name</mat-label>
+    <input
+      type="text"
+      matInput
+      placeholder="Ivanov"
+      formControlName="lastName"
+      autocomplete="off"
+    />
+  </mat-form-field>
+  <button mat-raised-button color="primary" class="btn" type="submit">
+    Next
+  </button>
+</form>
